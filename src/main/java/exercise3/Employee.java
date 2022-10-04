@@ -4,7 +4,7 @@ package exercise3;
  *
  * @author Ananta D
  */
-public class Employee extends Sortable {
+public class Employee {
     public Employee(String n, double s, int day, int month, int year) {
         name = n;
         salary = s;
@@ -25,11 +25,8 @@ public class Employee extends Sortable {
         return hireyear;
     }
     
-    public int compare(Sortable b) {
-        Employee eb = (Employee) b;
-        if (salary < eb.salary) return -1;
-        if (salary > eb.salary) return +1;
-        return 0;
+    public double getSalary() {
+        return salary;
     }
     
     private String name;

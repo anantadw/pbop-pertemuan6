@@ -24,7 +24,7 @@ public class EmployeeTest {
         for (i = 0; i < 3; i++) staff[i].print();
         
         System.out.println("\nEmployee after sort salary");
-        Sortable.shell_sort(staff);
+        // Sortable.shell_sort(staff);
         for (i = 0; i < 3; i++) staff[i].print();
     }
 }

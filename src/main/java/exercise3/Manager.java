@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
  *
  * @author Ananta D
  */
-public class Manager extends Employee {
+public class Manager extends Employee implements Sortable {
     public Manager(String n, double s, int d, int m, int y) {
         super(n, s, d, m, y);
         secretaryName = "";
@@ -23,6 +23,13 @@ public class Manager extends Employee {
     
     public String getSecretaryName() {
         return secretaryName;
+    }
+    
+    public int compare(Sortable b) {
+        Manager eb = (Manager) b;
+        if (getSalary() < eb.getSalary()) return -1;
+        if (getSalary() > eb.getSalary()) return +1;
+        return 0;
     }
     
     private String secretaryName;
